@@ -1,15 +1,12 @@
 #!/usr/bin/env python3
-
 from pathlib import Path
-from collections import defaultdict
 
 def main():
     input_file = Path("inputs/day1.txt")
-
-    n_hash = defaultdict(int)
+    n_hash = set()
     with input_file.open("r") as f:
         for line in f:
-            n_hash[int(line.rstrip("\n"))] += 1
+            n_hash.add(int(line.rstrip()))
     part1(n_hash)
     part2(n_hash)
 
@@ -30,4 +27,5 @@ def part2(n_hash):
             elif number3 in n_hash:
                 print(number1 * number2 * number3)
                 return
+
 main()
