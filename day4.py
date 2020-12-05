@@ -2,7 +2,7 @@
 from pathlib import Path
 import re
 def main():
-    input_file = Path("inputs/day5.txt")
+    input_file = Path("inputs/day4.txt")
     valid = {"byr", "iyr", "eyr", "hgt", "hcl", "ecl", "pid"}
     check = set()
     passport = {}
